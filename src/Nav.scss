@@ -1,17 +1,17 @@
 @import 'flex-mixins.scss';
 
-.nav-container {
+.lh_navContainer {
   margin: 0 auto;
   max-width: 100%;
   max-height: 100px;
   height: 100px;
 
-  .items {
+  .lh_items {
     height: 100%;
     padding: 10px;
-    @include flexbox-center-row;
+    @include lh_flexboxCenterRow;
 
-    .left {
+    .lh_left {
       //border: solid 0.5px red;
       width: 60%;
       height: 100%;
@@ -22,18 +22,18 @@
       margin-left: 20px;
 
 
-      .keep-together {
-        .menu-icon {
-          @include menu-icon-size
+      .lh_keepTogether {
+        .lh_menuIcon {
+          @include lh_menuIconSize
         }
 
-        .olympic-logo {
-          @include olympic-icon-size
+        .lh_olympicLogo {
+          @include lh_olympicIconSize
         }
       }
     }
 
-    .right {
+    .lh_right {
       //border: solid 0.5px blue;
       width: 40%;
       height: 100%;
@@ -42,11 +42,11 @@
       align-items: center;
       justify-content: flex-end;
 
-      .keep-together {
+      .lh_keepTogether {
         // Styling for this button taken from https://uiverse.io/aasisodiya/nasty-cat-19
-        @include nav-explore-button;
-        .explore-button {
-          @include flexbox-center-row;
+        @include lh_navExploreButton;
+        .lh_exploreButton {
+          @include lh_flexboxCenterRow;
         }
       }
     }
@@ -55,20 +55,20 @@
 }
 
 // When the explore button needs to be hidden
-.items-without-explore {
+.lh_itemsWithoutExplore {
   display:flex;
 
-  .items {
+  .lh_items {
 
     height: 100%;
     padding: 10px;
 
-    .menu-icon {
-      @include menu-icon-size
+    .lh_menuIcon {
+      @include lh_menuIconSize
     }
 
-    .olympic-logo {
-      @include olympic-icon-size
+    .lh_olympicLogo {
+      @include lh_olympicIconSize
     }
   }
 }
@@ -76,12 +76,12 @@
 
 
 @media (max-width: 768px) {
-  .nav-container {
-    .items {
-      .left {
+  .lh_navContainer {
+    .lh_items {
+      .lh_left {
         width: 50%;
       }
-      .right {
+      .lh_right {
         width: 50%;
       }
     }
@@ -89,20 +89,20 @@
 }
 
 @media (max-width: 480px) {
-  .nav-container {
-    .items {
-      .left {
+  .lh_navContainer {
+    .lh_items {
+      .lh_left {
 
         width: 100%;
         justify-content: center;
-        .keep-together {
+        .lh_keepTogether {
           padding: 5px;
           display: flex;
           align-items: center;
           justify-content: space-between;
         }
       }
-      .right {
+      .lh_right {
         display: none; // Hide the right side on smaller screens
       }
 
@@ -112,9 +112,9 @@
 
 // keeps the left items in nav stuck to the left
 @media (min-width: 480px) {
-  .nav-container {
-    .items {
-      .left {
+  .lh_navContainer {
+    .lh_items {
+      .lh_left {
         //border: solid 1px red;
         display: flex;
         flex-direction: row;

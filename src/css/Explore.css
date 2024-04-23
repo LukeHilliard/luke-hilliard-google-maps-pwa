@@ -51,12 +51,12 @@
   background-position: center;
 }
 
-.explore-body {
+.lh_exploreBody {
   width: 100%;
   background-color: #03173F;
 }
 
-.filter-container {
+.lh_filterContainer {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(3, 1fr);
@@ -67,11 +67,11 @@
   padding-bottom: 2em;
   margin-bottom: 1em;
 }
-.filter-container .item {
+.lh_filterContainer .lh_item {
   grid-column: 1/-1;
 }
 
-.filter-item {
+.lh_filterItem {
   max-height: 50px;
   height: 50px;
   max-width: 50px;
@@ -80,33 +80,33 @@
   justify-content: center;
   align-items: center;
 }
-.filter-item img {
+.lh_filterItem img {
   max-width: 50px;
 }
 
-.controls-container {
+.lh_controlsContainer {
   display: grid;
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
   grid-template-columns: repeat(4, 1fr); /* 5 columns */
   gap: 10px; /* Adjust the gap between grid items as needed */
 }
-.controls-container .search {
+.lh_controlsContainer .lh_search {
   display: inline-flex;
 }
-.controls-container .span-2 {
+.lh_controlsContainer .lh_span-2 {
   grid-row: 1; /* Place in the first row */
   grid-column: 1/span 2; /* Start at the first column and span across 2 columns */
   display: inline-flex;
 }
 
-.alternate-venues {
+.lh_alternateVenues {
   width: 100%;
 }
 
-.map-container {
+.lh_mapContainer {
   width: 100%;
 }
-.map-container .explore-map {
+.lh_mapContainer .lh_exploreMap {
   margin: 1em auto;
   max-width: 95%;
   width: 95%;
@@ -115,16 +115,16 @@
 }
 
 @media (max-width: 480px) {
-  .filter-container {
+  .lh_filterContainer {
     grid-auto-flow: column;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 0;
   }
-  .filter-container .item {
+  .lh_filterContainer .lh_item {
     display: none;
   }
-  .filter-item {
+  .lh_filterItem {
     height: 25px;
     width: 10px;
     flex: 0 0 auto;

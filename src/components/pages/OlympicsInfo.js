@@ -15,19 +15,19 @@ export default class OlympicsInfo extends Component {
                     />
                 </div>
 
-                <div className="olympics-body">
+                <div className="lh_olympicsBody">
 
-                    <div className="information-container">
+                    <div className="lh_informationContainer">
 
-                        <div className="item">
+                        <div className="lh_item">
                             <h3>Something1</h3>
                             <p>Some text in here Some text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in here</p>
                         </div>
-                        <div className="item">
+                        <div className="lh_item">
                             <h3>Something2</h3>
                             <p>Some text in here Some text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in here</p>
                         </div>
-                        <div className="item">
+                        <div className="lh_item">
                             <h3>Something3</h3>
                             <p>Some text in here Some text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in hereSome text in here</p>
                         </div>

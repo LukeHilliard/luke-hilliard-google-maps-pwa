@@ -242,8 +242,8 @@ class ExploreMap extends Component {
     render() {
 
         return (
-            <div className="map-container">
-                <div id="map" className="explore-map"></div>
+            <div className="lh_mapContainer">
+                <div id="map" className="lh_exploreMap"></div>
             </div>
 
         )

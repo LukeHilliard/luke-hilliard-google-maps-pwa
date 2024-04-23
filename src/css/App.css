@@ -3,11 +3,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.red-text {
+.lh_redText {
   color: red;
 }
 
-.lighter-text {
+.lh_lighterText {
   font-weight: lighter;
 }
 

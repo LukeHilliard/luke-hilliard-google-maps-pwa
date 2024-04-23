@@ -1,12 +1,12 @@
 @import 'flex-mixins.scss';
-@include toggle-venues-checkbox;
+@include lh_toggleVenuesCheckbox;
 
-.explore-body {
+.lh_exploreBody {
   width: 100%;
-  @include body-background-color
+  @include lh_bodyBackgroundColor
 }
 
-.filter-container {
+.lh_filterContainer {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(3, 1fr);  // Default to 3 columns
@@ -17,12 +17,12 @@
   padding-bottom: 2em;
   margin-bottom: 1em;
 
-  .item {
+  .lh_item {
     grid-column: 1 / -1;
   }
 }
 
-.filter-item {
+.lh_filterItem {
   max-height: 50px;
   height: 50px;
   max-width: 50px;
@@ -35,31 +35,31 @@
     max-width: 50px;
   }
 }
-.controls-container {
+.lh_controlsContainer {
   display: grid;
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
   grid-template-columns: repeat(4, 1fr); /* 5 columns */
   gap: 10px; /* Adjust the gap between grid items as needed */
 
-  .search {
+  .lh_search {
     display: inline-flex;
   }
 
-  .span-2 {
-    @include span-2;
+  .lh_span-2 {
+    @include lh_span-2;
   }
 }
 
-.alternate-venues {
+.lh_alternateVenues {
   width: 100%;
 }
 
 
-.map-container {
+.lh_mapContainer {
   width: 100%;
 
 
-  .explore-map {
+  .lh_exploreMap {
     margin: 1em auto;
     max-width: 95%;
     width: 95%;
@@ -71,19 +71,19 @@
 
 
 @media (max-width: 480px) {
-  .filter-container {
+  .lh_filterContainer {
     grid-auto-flow: column;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 0;
 
-    .item {
+    .lh_item {
       display: none;
     }
   }
 
 
-  .filter-item {
+  .lh_filterItem {
     height:25px;
     width:10px;
     flex: 0 0 auto;

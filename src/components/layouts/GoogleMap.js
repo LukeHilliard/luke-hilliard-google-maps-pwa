@@ -49,7 +49,7 @@ class GoogleMap extends Component {
 
     render() {
         return (
-            <div id="map" className="testing-map"></div>
+            <div id="map" className="lh_testing-map"></div>
         )
     }
 }

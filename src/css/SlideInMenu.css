@@ -1,4 +1,4 @@
-.slide-in-menu {
+.lh_slideInMenu {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,38 +12,38 @@
   animation: slideInMenu 0.4s ease-in forwards;
   /* Animation for sliding out */
 }
-.slide-in-menu .menu-header {
+.lh_slideInMenu .menuHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid #ccc;
 }
-.slide-in-menu .menu-header h1 {
+.lh_slideInMenu .menuHeader h1 {
   margin: 0;
 }
-.slide-in-menu .menu-header .close-button {
+.lh_slideInMenu .menuHeader .closeButton {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 24px;
 }
-.slide-in-menu .menu-options {
+.lh_slideInMenu .menuOptions {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
   padding: 20px;
 }
-.slide-in-menu .menu-options .menu-option {
+.lh_slideInMenu .menuOptions .menuOption {
   padding: 10px;
   border-bottom: 1px solid #ccc;
   cursor: pointer;
 }
-.slide-in-menu .menu-options .menu-option h5 {
+.lh_slideInMenu .menuOptions .menuOption h5 {
   font-weight: lighter;
   margin: 0 auto;
 }
-.slide-in-menu .small-screen-button {
+.lh_slideInMenu .lh_smallScreenButton {
   display: none;
 }
 @keyframes slideInMenu {
@@ -62,25 +62,25 @@
     transform: translateX(-100%); /* End position: off the screen */
   }
 }
-.slide-in-menu .slide-in-menu.closed {
+.lh_slideInMenu .lh_slideInMenu.closed {
   animation: slideOutMenu 0.4s ease-out forwards; /* Slide the menu out when it's closing */
 }
-.slide-in-menu .slide-in-menu.open {
+.lh_slideInMenu .lh_slideInMenu.open {
   animation: slideInMenu 0.4s ease-in forwards; /* Slide the menu in when it's open */
 }
 
 @media (min-width: 0px) {
-  .right {
+  .lh_right {
     display: none;
   }
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 100%;
   }
-  .slide-in-menu .small-screen-button {
+  .lh_slideInMenu .lh_smallScreenButton {
     display: flex;
     justify-content: center;
   }
-  .slide-in-menu .small-screen-button .keep-together .explore-button {
+  .lh_slideInMenu .lh_smallScreenButton .lh_keepTogether .lh_exploreButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,50 +97,50 @@
     box-shadow: 0 0.4rem #dfd9d9;
     cursor: pointer;
   }
-  .slide-in-menu .small-screen-button .keep-together:active {
+  .lh_slideInMenu .lh_smallScreenButton .lh_keepTogether:active {
     color: white;
     box-shadow: 0 0.2rem #dfd9d9;
     transform: translateY(0.2rem);
   }
-  .slide-in-menu .small-screen-button .keep-together:hover:not(:disabled) {
+  .lh_slideInMenu .lh_smallScreenButton .lh_keepTogether:hover:not(:disabled) {
     background: lightcoral;
     color: white;
     text-shadow: 0 0.1rem #bcb4b4;
   }
-  .slide-in-menu .small-screen-button .keep-together:disabled {
+  .lh_slideInMenu .lh_smallScreenButton .lh_keepTogether:disabled {
     cursor: auto;
     color: grey;
   }
 }
 @media (min-width: 400px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 50%;
   }
-  .slide-in-menu .small-screen-button {
+  .lh_slideInMenu .lh_smallScreenButton {
     display: none;
   }
 }
 @media (min-width: 401px) and (max-width: 480px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 50%;
   }
-  .slide-in-menu .small-screen-button {
+  .lh_slideInMenu .lh_smallScreenButton {
     display: flex;
   }
 }
 @media (min-width: 700px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 45%;
   }
-  .slide-in-menu .small-screen-button {
+  .lh_slideInMenu .lh_smallScreenButton {
     display: none;
   }
 }
 @media (min-width: 1000px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 45%;
   }
-  .slide-in-menu .small-screen-button {
+  .lh_slideInMenu .lh_smallScreenButton {
     display: none;
   }
 }
