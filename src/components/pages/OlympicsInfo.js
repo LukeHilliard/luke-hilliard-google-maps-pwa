@@ -4,10 +4,7 @@ import Footer from "../layouts/Footer";
 import StadiumsMap from "../maps/StadiumsMap";
 
 export default class OlympicsInfo extends Component {
-    constructor(props) {
-        super(props);
 
-    }
 
     render() {
         return(

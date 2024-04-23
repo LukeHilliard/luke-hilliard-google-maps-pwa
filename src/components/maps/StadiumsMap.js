@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { GoogleApiWrapper } from 'google-maps-react';
 
 
 // P = paralympic venue
@@ -59,7 +59,6 @@ class ExploreMap extends Component {
 
     loadMap = () => {
         const { google } = this.props;
-        let request = ""
         const map = new google.maps.Map(document.getElementById("map"), {
             zoom: DEFAULT_MAP_ZOOM,
             center: VENUE_MAP_CENTER,
@@ -225,6 +224,7 @@ class ExploreMap extends Component {
 
     }
     createMarker = (place, map, infoWindow) => {
+        const { google } = this.props.google
         // if no geometry provided return nothing //TODO create a pop up message?
         if (!place.geometry || !place.geometry.location) return;
 

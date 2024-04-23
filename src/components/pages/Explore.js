@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import GoogleMap from "../layouts/GoogleMap";
 import { Navigate } from "react-router-dom"; // redirect does not work with create-react-app, Navigate works the exact same
 import Nav from "../layouts/Nav";
 import ExploreMap from "../maps/ExploreMap";
@@ -56,7 +55,6 @@ export default class Explore extends Component {
         // checked = show paralympic stadiums
         // unchecked = show all stadiums
         const isChecked = e.target.checked
-        let name
         if(isChecked) {
             console.log("showing paralympic venues")
             this.changeVenueMarkers("paralympics")

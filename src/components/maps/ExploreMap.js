@@ -59,7 +59,6 @@ class ExploreMap extends Component {
 
     loadMap = () => {
         const { google } = this.props;
-        let request = ""
         const map = new google.maps.Map(document.getElementById("map"), {
             zoom: DEFAULT_MAP_ZOOM,
             center: VENUE_MAP_CENTER,

@@ -42,9 +42,9 @@ export default class Nav extends Component {
                     <div className="items">
                         <div className="left">
                             <div className="keep-together">
-                                <img onClick={this.toggleSlideInMenu} className="menu-icon" src="/images/nav/three-line-menu-icon.png" />
+                                <img onClick={this.toggleSlideInMenu} className="menu-icon" src="/images/nav/three-line-menu-icon.png" alt="Open side menu"/>
 
-                                <img className="olympic-logo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg"/>
+                                <img className="olympic-logo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg" alt="Paris 2024 Olympics logo"/>
                             </div>
 
                             {/*<img src="https://img.olympics.com/images/image/private//f_auto/primary/o3eae7skxxu8gba2ctwp" alt="Olympic rings" className="olympic-ring-logo"/>*/}
@@ -62,9 +62,9 @@ export default class Nav extends Component {
                     <div className="items-without-explore">
                         <div className="items">
 
-                                <img onClick={this.toggleSlideInMenu} className="menu-icon" src="/images/nav/three-line-menu-icon.png" />
+                                <img onClick={this.toggleSlideInMenu} className="menu-icon" src="/images/nav/three-line-menu-icon.png" alt="Open side menu"/>
 
-                                <img className="olympic-logo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg"/>
+                                <img className="olympic-logo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg" alt="Paris 2024 Olympics logo"/>
 
 
                             {/*<img src="https://img.olympics.com/images/image/private//f_auto/primary/o3eae7skxxu8gba2ctwp" alt="Olympic rings" className="olympic-ring-logo"/>*/}
