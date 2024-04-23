@@ -18,44 +18,44 @@ export default class SlideInMenu extends Component {
     render() {
         console.log(this.props.hideExploreButton)
         return (
-            <div className={`slide-in-menu ${this.props.isOpen ? 'open' : 'closed'}`}>
+            <div className={`lh_slideInMenu ${this.props.isOpen ? 'open' : 'closed'}`}>
 
                 {this.state.redirectToExplore ? <Navigate to={"/Explore"}/> : null}
                 {this.state.redirectToHome ? <Navigate to={"/Home"}/> : null}
                 {this.state.redirectToTestingDirectory ? <Navigate to={"/TestingDirectory"}/> : null}
                 {this.state.redirectToOlympicsInfo ? <Navigate to={"/OlympicsInfo"}/> : null}
 
-                <div className="menu-header">
+                <div className="menuHeader">
                     <h1>Paris 2024</h1>
-                    <button className="close-button" onClick={this.props.toggleMenu}>X</button>
+                    <button className="closeButton" onClick={this.props.toggleMenu}>X</button>
                 </div>
 
-                <div className="menu-options">
-                    <div className="menu-option" onClick={() => this.setState({redirectToHome: true})}>
+                <div className="menuOptions">
+                    <div className="menuOption" onClick={() => this.setState({redirectToHome: true})}>
                         <h5>Home</h5>
                     </div>
-                    <div className="menu-option" onClick={() => this.setState({redirectToOlympicsInfo: true})}>
+                    <div className="menuOption" onClick={() => this.setState({redirectToOlympicsInfo: true})}>
                         <h5>Olympics 2024</h5>
                     </div>
-                    <div className="menu-option">
+                    <div className="menuOption">
                         <h5>Tourism</h5>
                     </div>
-                    <div className="menu-option">
+                    <div className="menuOption">
                         <h5>Option 4</h5>
                     </div>
-                    <div className="menu-option">
+                    <div className="menuOption">
                         <h5>Are you attending?</h5>
                     </div>
-                    <div className="menu-option" onClick={() => this.setState({redirectToTestingDirectory: true})}>
-                        <h5><span className="red-text">Go to Testing Directory</span></h5>
+                    <div className="menuOption" onClick={() => this.setState({redirectToTestingDirectory: true})}>
+                        <h5><span className="lh_redText">Go to Testing Directory</span></h5>
                     </div>
 
                 </div>
 
                 {!this.props.hideExploreButton ?
-                    <div className="small-screen-button">
-                        <div className="keep-together">
-                            <button className="explore-button" onClick={() => this.setState({redirectToExplore: true})}>
+                    <div className="lh_smallScreenButton">
+                        <div className="lh_keepTogether">
+                            <button className="lh_exploreButton" onClick={() => this.setState({redirectToExplore: true})}>
                                 Explore Now
                             </button>
                         </div>

@@ -1,13 +1,15 @@
 @import 'flex-mixins.scss';
 
-.slide-in-menu {
+$color-white: white;
+
+.lh_slideInMenu {
 
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 40%;
-  background-color: white;
+  background-color: $color-white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   // Initially hide the menu off the screen
@@ -20,18 +22,18 @@
   // Animation for sliding in
   animation: slideInMenu 0.4s ease-in forwards;
 
-  .menu-header {
+  .menuHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $color-white;
 
     h1 {
       margin: 0;
     }
 
-    .close-button {
+    .closeButton {
       background: none;
       border: none;
       cursor: pointer;
@@ -39,15 +41,15 @@
     }
   }
 
-  .menu-options {
+  .menuOptions {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 20px;
 
-    .menu-option {
+    .menuOption {
       padding: 10px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $color-white;
 
       cursor: pointer;
 
@@ -58,7 +60,7 @@
     }
   }
 
-  .small-screen-button {
+  .lh_smallScreenButton {
     display: none;
   }
 
@@ -82,10 +84,10 @@
     }
   }
 
-  .slide-in-menu.closed {
+  .lh_slideInMenu.closed {
     animation: slideOutMenu 0.4s ease-out forwards; /* Slide the menu out when it's closing */
   }
-  .slide-in-menu.open {
+  .lh_slideInMenu.open {
     animation: slideInMenu 0.4s ease-in forwards; /* Slide the menu in when it's open */
   }
 
@@ -93,50 +95,49 @@
 
 
 @media (min-width: 0px) {
-  .right {
+  .lh_right {
     display: none;
   }
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 100%;
-        .small-screen-button {
-          display: flex;
-          justify-content: center;
-          .keep-together {
-            @include nav-explore-button;
+        .lh_smallScreenButton {
+          @include lh_justifiyContentCenter;
+          .lh_keepTogether {
+            @include lh_navExploreButton;
           }
         }
   }
 }
 @media (min-width: 400px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 50%;
-    .small-screen-button {
+    .lh_smallScreenButton {
       display: none;
     }
   }
 }
 @media (min-width: 401px) and (max-width: 480px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 50%;
-    .small-screen-button {
+    .lh_smallScreenButton {
       display: flex;
     }
   }
 }
 
 @media (min-width: 700px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 45%;
-    .small-screen-button {
+    .lh_smallScreenButton {
       display: none;
     }
   }
 }
 
 @media (min-width: 1000px) {
-  .slide-in-menu {
+  .lh_slideInMenu {
     width: 45%;
-    .small-screen-button {
+    .lh_smallScreenButton {
       display: none;
     }
   }

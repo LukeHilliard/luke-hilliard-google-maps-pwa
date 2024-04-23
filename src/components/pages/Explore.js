@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import GoogleMap from "../layouts/GoogleMap";
 import { Navigate } from "react-router-dom"; // redirect does not work with create-react-app, Navigate works the exact same
 import Nav from "../layouts/Nav";
 import ExploreMap from "../maps/ExploreMap";
@@ -56,7 +55,6 @@ export default class Explore extends Component {
         // checked = show paralympic stadiums
         // unchecked = show all stadiums
         const isChecked = e.target.checked
-        let name
         if(isChecked) {
             console.log("showing paralympic venues")
             this.changeVenueMarkers("paralympics")
@@ -79,18 +77,18 @@ export default class Explore extends Component {
                 {this.state.redirectBack ? <Navigate to={"/Home"}/> :null }
 
                 {/* body */}
-                <div className="explore-body">
+                <div className="lh_exploreBody">
 
-                    <div className="filter-container">
-                        <div className="item"><h3><span className="lighter-text">Where would you like to go?</span></h3></div>
+                    <div className="lh_filterContainer">
+                        <div className="lh_item"><h3><span className="lh_lighterText">Where would you like to go?</span></h3></div>
 
                         {/* TODO change the icons so that they are all the same design */}
-                        <div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/hotel-icon.png" alt="Hotel icon" name="hotel"/></div>
-                        <div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/pub-icon.png" alt="Pub icon" name="pub"/></div>
-                        <div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/resturant-icon.png" alt="Restaurant icon" name="restaurant"/></div>
-                        <div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/pharmacy-icon.png" alt="Pharamcy icon" name="pharmacy"/></div>
-                        <div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/train-station-icon.png" alt="Train station icon" name="train"/></div>
-                        <div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/coffee-shop-icon.png" alt="Coffee shop icon" name="coffee"/></div>
+                        <div onClick={this.changeMapMarkers}  className="lh_filterItem"><img src="/images/explore-icons/hotel-icon.png" alt="Hotel icon" name="hotel"/></div>
+                        <div onClick={this.changeMapMarkers}  className="lh_filterItem"><img src="/images/explore-icons/pub-icon.png" alt="Pub icon" name="pub"/></div>
+                        <div onClick={this.changeMapMarkers}  className="lh_filterItem"><img src="/images/explore-icons/resturant-icon.png" alt="Restaurant icon" name="restaurant"/></div>
+                        <div onClick={this.changeMapMarkers}  className="lh_filterItem"><img src="/images/explore-icons/pharmacy-icon.png" alt="Pharamcy icon" name="pharmacy"/></div>
+                        <div onClick={this.changeMapMarkers}  className="lh_filterItem"><img src="/images/explore-icons/train-station-icon.png" alt="Train station icon" name="train"/></div>
+                        <div onClick={this.changeMapMarkers}  className="lh_filterItem"><img src="/images/explore-icons/coffee-shop-icon.png" alt="Coffee shop icon" name="coffee"/></div>
                         {/*<div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/olympics-icon.png" alt="Olympics icon" name="olympics"/></div>*/}
                         {/*<div onClick={this.changeMapMarkers}  className="filter-item"><img src="/images/explore-icons/paralympics-icon.png" alt="Paralympics icon" name="paralympics"/></div>*/}
 
@@ -98,8 +96,8 @@ export default class Explore extends Component {
 
                     </div>
 
-                    <div className="controls-container">
-                        <div className="alternate-venues">
+                    <div className="lh_controlsContainer">
+                        <div className="lh_alternateVenues">
                             <div className="checkbox-wrapper-41">
                                 <input type="checkbox" onChange={this.handleVenueChange}/>
                             </div>

@@ -27,15 +27,15 @@ export default class TestingDirectory extends Component
 
 
                 <Nav/>
-                <div className="testing-container">
-                    <div className="controls-container">
-                        <div className="item">
+                <div className="lh_testing-container">
+                    <div className="lh_controlsContainer">
+                        <div className="lh_item">
                             <button onClick={() => this.setState({redirectToHome: true})}>
                                 Home Page
                             </button>
                         </div>
 
-                        <div className="item">
+                        <div className="lh_item">
                             <button onClick={() => this.setState({redirectToMap: true})}>
                                 Map
                             </button>

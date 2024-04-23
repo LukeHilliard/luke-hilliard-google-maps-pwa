@@ -59,7 +59,6 @@ class ExploreMap extends Component {
 
     loadMap = () => {
         const { google } = this.props;
-        let request = ""
         const map = new google.maps.Map(document.getElementById("map"), {
             zoom: DEFAULT_MAP_ZOOM,
             center: VENUE_MAP_CENTER,
@@ -245,8 +244,8 @@ class ExploreMap extends Component {
         // console.log("****", this.props.showAllVenues)
         console.log(process.env["REACT_APP_API_KEY "])
         return (
-            <div className="map-container">
-                <div id="map" className="explore-map"></div>
+            <div className="lh_mapContainer">
+                <div id="map" className="lh_exploreMap"></div>
             </div>
 
         )

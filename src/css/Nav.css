@@ -1,10 +1,10 @@
-.nav-container {
+.lh_navContainer {
   margin: 0 auto;
   max-width: 100%;
   max-height: 100px;
   height: 100px;
 }
-.nav-container .items {
+.lh_navContainer .lh_items {
   height: 100%;
   padding: 10px;
   display: flex;
@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
 }
-.nav-container .items .left {
+.lh_navContainer .lh_items .lh_left {
   width: 60%;
   height: 100%;
   display: flex;
@@ -21,7 +21,7 @@
   justify-content: space-around;
   margin-left: 20px;
 }
-.nav-container .items .left .keep-together .menu-icon {
+.lh_navContainer .lh_items .lh_left .lh_keepTogether .lh_menuIcon {
   margin-right: 10%;
   max-width: 20%;
   width: 20%;
@@ -29,12 +29,12 @@
   height: 20%;
   position: sticky;
 }
-.nav-container .items .left .keep-together .olympic-logo {
+.lh_navContainer .lh_items .lh_left .lh_keepTogether .lh_olympicLogo {
   max-width: 30%;
   width: 30%;
   max-height: 30%;
 }
-.nav-container .items .right {
+.lh_navContainer .lh_items .lh_right {
   width: 40%;
   height: 100%;
   display: flex;
@@ -42,7 +42,7 @@
   align-items: center;
   justify-content: flex-end;
 }
-.nav-container .items .right .keep-together .explore-button {
+.lh_navContainer .lh_items .lh_right .lh_keepTogether .lh_exploreButton {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -59,35 +59,35 @@
   box-shadow: 0 0.4rem #dfd9d9;
   cursor: pointer;
 }
-.nav-container .items .right .keep-together:active {
+.lh_navContainer .lh_items .lh_right .lh_keepTogether:active {
   color: white;
   box-shadow: 0 0.2rem #dfd9d9;
   transform: translateY(0.2rem);
 }
-.nav-container .items .right .keep-together:hover:not(:disabled) {
+.lh_navContainer .lh_items .lh_right .lh_keepTogether:hover:not(:disabled) {
   background: lightcoral;
   color: white;
   text-shadow: 0 0.1rem #bcb4b4;
 }
-.nav-container .items .right .keep-together:disabled {
+.lh_navContainer .lh_items .lh_right .lh_keepTogether:disabled {
   cursor: auto;
   color: grey;
 }
-.nav-container .items .right .keep-together .explore-button {
+.lh_navContainer .lh_items .lh_right .lh_keepTogether .lh_exploreButton {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.items-without-explore {
+.lh_itemsWithoutExplore {
   display: flex;
 }
-.items-without-explore .items {
+.lh_itemsWithoutExplore .lh_items {
   height: 100%;
   padding: 10px;
 }
-.items-without-explore .items .menu-icon {
+.lh_itemsWithoutExplore .lh_items .lh_menuIcon {
   margin-right: 10%;
   max-width: 20%;
   width: 20%;
@@ -95,37 +95,37 @@
   height: 20%;
   position: sticky;
 }
-.items-without-explore .items .olympic-logo {
+.lh_itemsWithoutExplore .lh_items .lh_olympicLogo {
   max-width: 30%;
   width: 30%;
   max-height: 30%;
 }
 
 @media (max-width: 768px) {
-  .nav-container .items .left {
+  .lh_navContainer .lh_items .lh_left {
     width: 50%;
   }
-  .nav-container .items .right {
+  .lh_navContainer .lh_items .lh_right {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
-  .nav-container .items .left {
+  .lh_navContainer .lh_items .lh_left {
     width: 100%;
     justify-content: center;
   }
-  .nav-container .items .left .keep-together {
+  .lh_navContainer .lh_items .lh_left .lh_keepTogether {
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .nav-container .items .right {
+  .lh_navContainer .lh_items .lh_right {
     display: none;
   }
 }
 @media (min-width: 480px) {
-  .nav-container .items .left {
+  .lh_navContainer .lh_items .lh_left {
     display: flex;
     flex-direction: row;
     align-items: center;

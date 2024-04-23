@@ -25,7 +25,7 @@ export default class Nav extends Component {
     }
     render() {
         return (
-            <nav className="nav-container">
+            <nav className="lh_navContainer">
                 {/* Redirects */}
                 {this.state.redirectToExplore ? <Navigate to={"/Explore"}/> : null}
 
@@ -39,32 +39,32 @@ export default class Nav extends Component {
 
 
                 {!this.props.hideExploreButton ?
-                    <div className="items">
-                        <div className="left">
-                            <div className="keep-together">
-                                <img onClick={this.toggleSlideInMenu} className="menu-icon" src="/images/nav/three-line-menu-icon.png" />
+                    <div className="lh_items">
+                        <div className="lh_left">
+                            <div className="lh_keepTogether">
+                                <img onClick={this.toggleSlideInMenu} className="lh_menuIcon" src="/images/nav/three-line-menu-icon.png" alt="Open side menu"/>
 
-                                <img className="olympic-logo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg"/>
+                                <img className="lh_olympicLogo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg" alt="Paris 2024 Olympics logo"/>
                             </div>
 
                             {/*<img src="https://img.olympics.com/images/image/private//f_auto/primary/o3eae7skxxu8gba2ctwp" alt="Olympic rings" className="olympic-ring-logo"/>*/}
                         </div>
 
-                        <div className="right">
-                            <div className="keep-together">
-                                <button className="explore-button" onClick={() => this.setState({redirectToExplore: true})}>
+                        <div className="lh_right">
+                            <div className="lh_keepTogether">
+                                <button className="lh_exploreButton" onClick={() => this.setState({redirectToExplore: true})}>
                                     Explore Now
                                 </button>
                             </div>
                         </div>
                     </div>
                 :
-                    <div className="items-without-explore">
-                        <div className="items">
+                    <div className="lh_itemsWithoutExplore">
+                        <div className="lh_items">
 
-                                <img onClick={this.toggleSlideInMenu} className="menu-icon" src="/images/nav/three-line-menu-icon.png" />
+                                <img onClick={this.toggleSlideInMenu} className="lh_menuIcon" src="/images/nav/three-line-menu-icon.png" alt="Open side menu"/>
 
-                                <img className="olympic-logo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg"/>
+                                <img className="lh_olympicLogo" src="https://upload.wikimedia.org/wikipedia/en/d/d1/2024_Summer_Olympics_logo.svg" alt="Paris 2024 Olympics logo"/>
 
 
                             {/*<img src="https://img.olympics.com/images/image/private//f_auto/primary/o3eae7skxxu8gba2ctwp" alt="Olympic rings" className="olympic-ring-logo"/>*/}

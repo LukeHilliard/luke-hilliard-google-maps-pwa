@@ -1,12 +1,14 @@
 @import 'flex-mixins.scss';
 
-.olympics-body {
+$background-color: white;
+
+.lh_olympicsBody {
   width: 100%;
-  @include body-background-color;
+  @include lh_bodyBackgroundColor;
 
 
-  .information-container {
+  .lh_informationContainer {
     display: grid;
-    background-color: white;
+    $background-color: white;
   }
 }

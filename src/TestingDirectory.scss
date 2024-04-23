@@ -9,26 +9,26 @@ h1 {
   justify-content: center;
 }
 
-.testing-container{
+.lh_testing-container{
   display:flex;
   flex-direction: column;
 }
 
-.controls-container {
-  @include flexbox-center-row;
+.lh_controlsContainer {
+  @include lh_flexboxCenterRow;
 
   margin-top: 10px;
   border: solid black 1px;
-  .item {
+  .lh_item {
     padding: 5px;
   }
 }
 
-.map-container {
-  @include flexbox-center-row
+.lh_mapContainer {
+  @include lh_flexboxCenterRow
 }
 
-.testing-map {
+.lh_testing-map {
   margin: 10px;
   width: 340px;
   height: 550px;
@@ -36,17 +36,17 @@ h1 {
 }
 
 @media (max-width: 350px) {
-  .testing-map {
+  .lh_testing-map {
     width: 290px;
   }
 }
 @media (min-width: 360px) {
-  .testing-map {
+  .lh_testing-map {
     width: 340px;
   }
 }
 @media (min-width: 420px) {
-  .testing-map {
+  .lh_testing-map {
     width: 390px;
   }
 }

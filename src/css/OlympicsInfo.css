@@ -1,8 +1,8 @@
-.olympics-body {
+.lh_olympicsBody {
   width: 100%;
   background-color: #03173F;
 }
-.olympics-body .information-container {
+.lh_olympicsBody .lh_informationContainer {
   display: grid;
   background-color: white;
 }

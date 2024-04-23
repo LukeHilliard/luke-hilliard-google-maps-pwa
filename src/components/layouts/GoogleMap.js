@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { GoogleApiWrapper } from 'google-maps-react';
 
 
 class GoogleMap extends Component {
@@ -49,7 +49,7 @@ class GoogleMap extends Component {
 
     render() {
         return (
-            <div id="map" className="testing-map"></div>
+            <div id="map" className="lh_testing-map"></div>
         )
     }
 }
