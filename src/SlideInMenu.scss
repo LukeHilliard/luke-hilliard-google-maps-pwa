@@ -1,0 +1,143 @@
+@import 'flex-mixins.scss';
+
+.slide-in-menu {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 40%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  // Initially hide the menu off the screen
+  transform: translateX(-100%);
+
+  // Ensure menu appears above other content
+  z-index: 1000;
+  overflow-y: auto;
+
+  // Animation for sliding in
+  animation: slideInMenu 0.4s ease-in forwards;
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+
+    h1 {
+      margin: 0;
+    }
+
+    .close-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+    }
+  }
+
+  .menu-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px;
+
+    .menu-option {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+
+      cursor: pointer;
+
+      h5{
+        font-weight: lighter;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .small-screen-button {
+    display: none;
+  }
+
+  // Animation for sliding in
+  @keyframes slideInMenu {
+    from {
+      transform: translateX(-100%); /* Start position: off the screen */
+    }
+    to {
+      transform: translateX(0); /* End position: fully visible */
+    }
+  }
+
+  /* Animation for sliding out */
+  @keyframes slideOutMenu {
+    from {
+      transform: translateX(0); /* Start position: fully visible */
+    }
+    to {
+      transform: translateX(-100%); /* End position: off the screen */
+    }
+  }
+
+  .slide-in-menu.closed {
+    animation: slideOutMenu 0.4s ease-out forwards; /* Slide the menu out when it's closing */
+  }
+  .slide-in-menu.open {
+    animation: slideInMenu 0.4s ease-in forwards; /* Slide the menu in when it's open */
+  }
+
+}
+
+
+@media (min-width: 0px) {
+  .right {
+    display: none;
+  }
+  .slide-in-menu {
+    width: 100%;
+        .small-screen-button {
+          display: flex;
+          justify-content: center;
+          .keep-together {
+            @include nav-explore-button;
+          }
+        }
+  }
+}
+@media (min-width: 400px) {
+  .slide-in-menu {
+    width: 50%;
+    .small-screen-button {
+      display: none;
+    }
+  }
+}
+@media (min-width: 401px) and (max-width: 480px) {
+  .slide-in-menu {
+    width: 50%;
+    .small-screen-button {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .slide-in-menu {
+    width: 45%;
+    .small-screen-button {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .slide-in-menu {
+    width: 45%;
+    .small-screen-button {
+      display: none;
+    }
+  }
+}

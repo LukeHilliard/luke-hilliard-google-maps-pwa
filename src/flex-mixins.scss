@@ -1,0 +1,139 @@
+@mixin body-background-color {
+  background-color: #03173F;
+}
+
+
+@mixin flexbox-center-row {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexbox-center-column {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Styling for this button taken from https://uiverse.io/aasisodiya/nasty-cat-19
+@mixin nav-explore-button {
+  .explore-button {
+    @include flexbox-center-row;
+    width: 8em;
+    height: 3.5em;
+    background-color: white;
+    border: solid 2px #cccc66;
+    border-left-style: none;
+    border-right-style: none;
+    font-size: 1em;
+    border-radius: 1rem;
+    color: #cccc66;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+
+
+  }
+
+  &:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+  }
+
+  &:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+  }
+
+  &:disabled {
+    cursor: auto;
+    color: grey;
+  }
+}
+
+
+
+
+
+
+// Styling for this button taken from https://uiverse.io/Shoh2008/brown-bulldog-12
+@mixin toggle-venues-checkbox {
+  .checkbox-wrapper-41 {
+    --size: 120px;
+  }
+
+  .checkbox-wrapper-41 input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: calc(var(--size) * 1.4);
+    height: calc(var(--size) / 2);
+    border: 3px solid #222;
+    border-radius: 30px 100px 100px 100px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+   background-color: #cdb766;;
+  }
+
+  .checkbox-wrapper-41 input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: calc(var(--size) / 2 * 1.4);
+    height: calc(var(--size) / 2);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0.7);
+    border: 3px solid #222;
+    border-radius: 30px 100px 100px 100px;
+    background-color: white;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    background-image: url("/Users/lukehilliard/Desktop/Full-Stack-CA/full-stack-google-maps/client/public/images/explore-icons/olympics-icon.png"); /* Set the image as background */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .checkbox-wrapper-41 input[type="checkbox"]:checked {
+    background-color: #ffffff;
+    border-radius: 100px 100px 30px 100px;
+    border: solid 3px #cdb766;
+  }
+
+  .checkbox-wrapper-41 input[type="checkbox"]:checked::before {
+    left: 50%;
+    border: solid 3px #cdb766;
+    border-radius: 100px 100px 30px 100px;
+    background-image: url("/Users/lukehilliard/Desktop/Full-Stack-CA/full-stack-google-maps/client/public/images/explore-icons/paralympics-icon.png"); /* Set the image as background */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+// Styling for the menu icon and olympic logo on Nav component
+@mixin menu-icon-size {
+  margin-right: 10%;
+  max-width: 20%;
+  width: 20%;
+  max-height:20%;
+  height:20%;
+  position: sticky;
+}
+@mixin olympic-icon-size {
+  max-width: 30%;
+  width: 30%;
+  max-height:30%;
+}
+
+@mixin span-2 {
+  grid-row: 1; /* Place in the first row */
+  grid-column: 1 / span 2; /* Start at the first column and span across 2 columns */
+  display: inline-flex;
+}
+
+

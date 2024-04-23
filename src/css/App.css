@@ -1,0 +1,14 @@
+body {
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.red-text {
+  color: red;
+}
+
+.lighter-text {
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=App.css.map */

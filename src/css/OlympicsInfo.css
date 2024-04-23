@@ -1,0 +1,10 @@
+.olympics-body {
+  width: 100%;
+  background-color: #03173F;
+}
+.olympics-body .information-container {
+  display: grid;
+  background-color: white;
+}
+
+/*# sourceMappingURL=OlympicsInfo.css.map */

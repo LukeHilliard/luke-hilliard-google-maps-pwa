@@ -1,0 +1,129 @@
+@import 'flex-mixins.scss';
+
+.nav-container {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100px;
+  height: 100px;
+
+  .items {
+    height: 100%;
+    padding: 10px;
+    @include flexbox-center-row;
+
+    .left {
+      //border: solid 0.5px red;
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin-left: 20px;
+
+
+      .keep-together {
+        .menu-icon {
+          @include menu-icon-size
+        }
+
+        .olympic-logo {
+          @include olympic-icon-size
+        }
+      }
+    }
+
+    .right {
+      //border: solid 0.5px blue;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      .keep-together {
+        // Styling for this button taken from https://uiverse.io/aasisodiya/nasty-cat-19
+        @include nav-explore-button;
+        .explore-button {
+          @include flexbox-center-row;
+        }
+      }
+    }
+
+  }
+}
+
+// When the explore button needs to be hidden
+.items-without-explore {
+  display:flex;
+
+  .items {
+
+    height: 100%;
+    padding: 10px;
+
+    .menu-icon {
+      @include menu-icon-size
+    }
+
+    .olympic-logo {
+      @include olympic-icon-size
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    .items {
+      .left {
+        width: 50%;
+      }
+      .right {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    .items {
+      .left {
+
+        width: 100%;
+        justify-content: center;
+        .keep-together {
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .right {
+        display: none; // Hide the right side on smaller screens
+      }
+
+    }
+  }
+}
+
+// keeps the left items in nav stuck to the left
+@media (min-width: 480px) {
+  .nav-container {
+    .items {
+      .left {
+        //border: solid 1px red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+
+

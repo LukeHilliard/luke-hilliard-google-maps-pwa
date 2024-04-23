@@ -1,0 +1,12 @@
+@import 'flex-mixins.scss';
+
+.olympics-body {
+  width: 100%;
+  @include body-background-color;
+
+
+  .information-container {
+    display: grid;
+    background-color: white;
+  }
+}

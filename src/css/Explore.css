@@ -1,0 +1,136 @@
+.checkbox-wrapper-41 {
+  --size: 120px;
+}
+
+.checkbox-wrapper-41 input[type=checkbox] {
+  -webkit-appearance: none;
+  width: calc(var(--size) * 1.4);
+  height: calc(var(--size) / 2);
+  border: 3px solid #222;
+  border-radius: 30px 100px 100px 100px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+  background-color: #cdb766;
+}
+
+.checkbox-wrapper-41 input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) / 2 * 1.4);
+  height: calc(var(--size) / 2);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0.7);
+  border: 3px solid #222;
+  border-radius: 30px 100px 100px 100px;
+  background-color: white;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  background-image: url("/Users/lukehilliard/Desktop/Full-Stack-CA/full-stack-google-maps/client/public/images/explore-icons/olympics-icon.png"); /* Set the image as background */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-wrapper-41 input[type=checkbox]:checked {
+  background-color: #ffffff;
+  border-radius: 100px 100px 30px 100px;
+  border: solid 3px #cdb766;
+}
+
+.checkbox-wrapper-41 input[type=checkbox]:checked::before {
+  left: 50%;
+  border: solid 3px #cdb766;
+  border-radius: 100px 100px 30px 100px;
+  background-image: url("/Users/lukehilliard/Desktop/Full-Stack-CA/full-stack-google-maps/client/public/images/explore-icons/paralympics-icon.png"); /* Set the image as background */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.explore-body {
+  width: 100%;
+  background-color: #03173F;
+}
+
+.filter-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 60px;
+  background-color: white;
+  border-top: #03173F solid 1em;
+  border-bottom-style: none;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+.filter-container .item {
+  grid-column: 1/-1;
+}
+
+.filter-item {
+  max-height: 50px;
+  height: 50px;
+  max-width: 50px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-item img {
+  max-width: 50px;
+}
+
+.controls-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  grid-template-columns: repeat(4, 1fr); /* 5 columns */
+  gap: 10px; /* Adjust the gap between grid items as needed */
+}
+.controls-container .search {
+  display: inline-flex;
+}
+.controls-container .span-2 {
+  grid-row: 1; /* Place in the first row */
+  grid-column: 1/span 2; /* Start at the first column and span across 2 columns */
+  display: inline-flex;
+}
+
+.alternate-venues {
+  width: 100%;
+}
+
+.map-container {
+  width: 100%;
+}
+.map-container .explore-map {
+  margin: 1em auto;
+  max-width: 95%;
+  width: 95%;
+  height: 550px;
+  border: thin solid #ccc;
+}
+
+@media (max-width: 480px) {
+  .filter-container {
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0;
+  }
+  .filter-container .item {
+    display: none;
+  }
+  .filter-item {
+    height: 25px;
+    width: 10px;
+    flex: 0 0 auto;
+    min-width: 150px;
+    margin: 10px;
+  }
+}
+
+/*# sourceMappingURL=Explore.css.map */

@@ -1,0 +1,55 @@
+@import 'flex-mixins.scss';
+.div {
+  padding: 0;
+}
+
+// Set for <500px
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.testing-container{
+  display:flex;
+  flex-direction: column;
+}
+
+.controls-container {
+  @include flexbox-center-row;
+
+  margin-top: 10px;
+  border: solid black 1px;
+  .item {
+    padding: 5px;
+  }
+}
+
+.map-container {
+  @include flexbox-center-row
+}
+
+.testing-map {
+  margin: 10px;
+  width: 340px;
+  height: 550px;
+  border: thin solid #ccc;
+}
+
+@media (max-width: 350px) {
+  .testing-map {
+    width: 290px;
+  }
+}
+@media (min-width: 360px) {
+  .testing-map {
+    width: 340px;
+  }
+}
+@media (min-width: 420px) {
+  .testing-map {
+    width: 390px;
+  }
+}
+
+
+
