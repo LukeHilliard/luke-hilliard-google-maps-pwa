@@ -1,5 +1,7 @@
 @import 'flex-mixins.scss';
-@include lh_toggleVenuesCheckbox;
+
+$border-color: #03173F;
+
 
 .lh_exploreBody {
   width: 100%;
@@ -12,7 +14,7 @@
   grid-template-columns: repeat(3, 1fr);  // Default to 3 columns
   grid-auto-rows: 60px;
   background-color: white;
-  border-top: #03173F solid 1em;
+  border-top: $border-color solid 1em;
   border-bottom-style: none ;
   padding-bottom: 2em;
   margin-bottom: 1em;
@@ -27,9 +29,7 @@
   height: 50px;
   max-width: 50px;
   min-width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include lh_justifiyContentCenter;
 
   img {
     max-width: 50px;
@@ -57,7 +57,6 @@
 
 .lh_mapContainer {
   width: 100%;
-
 
   .lh_exploreMap {
     margin: 1em auto;

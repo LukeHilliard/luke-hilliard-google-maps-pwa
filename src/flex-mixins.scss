@@ -17,6 +17,12 @@
   align-items: center;
 }
 
+@mixin lh_justifiyContentCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // Styling for this button taken from https://uiverse.io/aasisodiya/nasty-cat-19
 @mixin lh_navExploreButton {
   .lh_exploreButton {
